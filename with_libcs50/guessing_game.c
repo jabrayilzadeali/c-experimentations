@@ -5,7 +5,7 @@
 #include <string.h>
 #include <time.h>
 
-void main()
+int main()
 {
     srand(time(NULL));
     int find_this_number = rand() % 100 + 1;
@@ -51,7 +51,7 @@ void main()
     printf("choose deficulty:\n - e or easy,\n - m or medium\n - h or hard");
 
     do {
-        string get_difficulty = get_string("The dificulty: ");
+        string get_difficulty = get_string("\nThe dificulty: ");
         if (strcmp(get_difficulty, "easy") == 0 ||
             strcmp(get_difficulty, "e") == 0) {
             number_of_guesses = 15;
@@ -82,7 +82,7 @@ void main()
     printf("You have to guess in %i try\n", number_of_guesses);
     printf("---------------------------\n");
     printf("-------- Good Luck --------\n");
-    printf("---------------------------\n");
+    printf("---------------------------\n\n");
 
     if (ai_plays) {
         int i = 0;
@@ -118,15 +118,15 @@ void main()
                 }
 
                 printf("-----------------------\n");
-                printf("AI guess: %i\n", ai_guess);
-                printf("closest_min: %i\n", closest_min);
-                printf("closest_max: %i\n", closest_max);
-                printf("diff: %i\n", diff);
+                // printf("AI guess: %i\n", ai_guess);
+                // printf("closest_min: %i\n", closest_min);
+                // printf("closest_max: %i\n", closest_max);
+                // printf("diff: %i\n", diff);
 
                 ai_guess = closest_min + diff / 2;
 
-                printf("new AI guess: %i\n", ai_guess);
-                printf("-----------------------\n");
+                // printf("new AI guess: %i\n", ai_guess);
+                // printf("-----------------------\n");
             }
             else if (ai_guess > find_this_number) {
                 closest_max = ai_guess;
@@ -141,15 +141,15 @@ void main()
                 }
 
                 printf("-----------------------\n");
-                printf("AI guess: %i\n", ai_guess);
-                printf("closest_min: %i\n", closest_min);
-                printf("closest_max: %i\n", closest_max);
-                printf("diff: %i\n", diff);
+                // printf("AI guess: %i\n", ai_guess);
+                // printf("closest_min: %i\n", closest_min);
+                // printf("closest_max: %i\n", closest_max);
+                // printf("diff: %i\n", diff);
 
                 ai_guess = closest_min + diff / 2;
 
-                printf("new AI guess: %i\n", ai_guess);
-                printf("-----------------------\n");
+                // printf("new AI guess: %i\n", ai_guess);
+                // printf("-----------------------\n");
             }
             i++;
         }
@@ -165,7 +165,7 @@ void main()
         int remaining_guesses = number_of_guesses - i - 1;
 
         if (user_guess == find_this_number) {
-            i += 2;
+            i += 1;
             printf("You Won in %i try\n", i);
             exit(0);
         }
