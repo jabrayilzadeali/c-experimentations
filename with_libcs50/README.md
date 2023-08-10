@@ -1,9 +1,14 @@
 ### Creating the executable
 ```
-    gcc hello.c -o exe/hello libcs50/cs50.c
+    gcc hello.c -o bin/hello libcs50/cs50.c
 ```
 
 ### Running
 ```
-    ./exe/hello.exe
+    ./bin/hello
+```
+
+### Or Together
+```
+    gcc hello.c -o bin/hello libcs50/cs50.c && ./bin/hello
 ```

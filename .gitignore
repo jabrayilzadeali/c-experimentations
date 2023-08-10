@@ -46,7 +46,11 @@
 *.mod*
 *.cmd
 .tmp_versions/
+.out
 modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Compiled executables and output files
+bin/
